@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>MhtConverter</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Ujjal Das</Authors>
     <Company>Microchip Technology</Company>
     <RepositoryUrl></RepositoryUrl>
