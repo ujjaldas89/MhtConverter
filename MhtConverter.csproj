@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramGework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>UD.MhtConverter</PackageId>
     <Version>1.0.3</Version>
     <Authors>Ujjal Das</Authors>
     <Company>Microchip Technology</Company>
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl>https://github.com/ujjaldas89/MhtConverter</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
