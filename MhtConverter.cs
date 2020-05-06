@@ -104,10 +104,6 @@ namespace MhtConverter
                 var hrefAttributeValue = aNode.GetAttributeValue("href", "");
                 if (!string.IsNullOrEmpty(hrefAttributeValue))
                 {
-                    // if (hrefAttributeValue.Contains("#") && !hrefAttributeValue.StartsWith("3D"))
-                    // {
-                    //     aNode.SetAttributeValue("href", hrefAttributeValue.Replace("#", $"{Path.GetFileName(targetFile)}#"));
-                    // }
                     if (hrefAttributeValue.Contains(".htm") || hrefAttributeValue.Contains(".html"))
                     {
                         if (!_externalResource.ContainsKey(hrefAttributeValue))
