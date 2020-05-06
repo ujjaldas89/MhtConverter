@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>MhtConverter</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramGework>
+    <PackageId>UD.MhtConverter</PackageId>
     <Version>1.0.3</Version>
     <Authors>Ujjal Das</Authors>
     <Company>Microchip Technology</Company>

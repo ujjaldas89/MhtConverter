@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\VSCodeSource\\MhtConverter_Git\\MhtConverter\\MhtConverter.csproj": {}
+  },
+  "projects": {
+    "D:\\VSCodeSource\\MhtConverter_Git\\MhtConverter\\MhtConverter.csproj": {
+      "version": "1.0.3",
+      "restore": {
+        "projectUniqueName": "D:\\VSCodeSource\\MhtConverter_Git\\MhtConverter\\MhtConverter.csproj",
+        "projectName": "MhtConverter",
+        "projectPath": "D:\\VSCodeSource\\MhtConverter_Git\\MhtConverter\\MhtConverter.csproj",
+        "packagesPath": "C:\\Users\\I17055.MCHP-MAIN\\.nuget\\packages\\",
+        "outputPath": "D:\\VSCodeSource\\MhtConverter_Git\\MhtConverter\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\I17055.MCHP-MAIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "HtmlAgilityPack.NetCore": {
+              "target": "Package",
+              "version": "[1.5.0.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

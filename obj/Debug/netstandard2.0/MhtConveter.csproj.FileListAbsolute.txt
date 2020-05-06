@@ -1,0 +1,9 @@
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\bin\Debug\netstandard2.0\MhtConverter.deps.json
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\bin\Debug\netstandard2.0\MhtConverter.dll
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\bin\Debug\netstandard2.0\MhtConverter.pdb
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\obj\Debug\netstandard2.0\MhtConverter.csprojAssemblyReference.cache
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\obj\Debug\netstandard2.0\MhtConverter.csproj.CoreCompileInputs.cache
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\obj\Debug\netstandard2.0\MhtConverter.AssemblyInfoInputs.cache
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\obj\Debug\netstandard2.0\MhtConverter.AssemblyInfo.cs
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\obj\Debug\netstandard2.0\MhtConverter.dll
+D:\VSCodeSource\MhtConverter_Git\MhtConverter\obj\Debug\netstandard2.0\MhtConverter.pdb
