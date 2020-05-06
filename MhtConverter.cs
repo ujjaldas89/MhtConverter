@@ -120,7 +120,7 @@ namespace MhtConverter
         private void CollectExternalScripts(HtmlDocument doc)
         {
             //Collect Scripts
-            var scriptNodes = doc.DocumentNode.SelectNodes("//SCRIPT");
+            var scriptNodes = doc.DocumentNode.SelectNodes("//script");
             foreach (var scriptNode in scriptNodes)
             {
                 var srcAttributeValue = scriptNode.GetAttributeValue("src", "");
