@@ -12,9 +12,8 @@ namespace MhtConverter
         private Dictionary<string, string> _externalResource;
         public string OutputFile { get; private set; }
         private string _sourceHtmlDirectory;
-        private string _targetFile;
-        private string _tempHtmlFile;
-        private string _sourceHtmlFile;
+        private Stream _targetFile;
+        private Stream _sourceHtmlFile;
         public MhtConverter()
         {
             _scriptSources = new Dictionary<string, string>();
@@ -23,10 +22,29 @@ namespace MhtConverter
 
         public void Convert(string htmlFile, string targetFile = null)
         {
+            using(var _sourceHtmlDirectory = new FileStream(htmlFile, FileMode.Open))
+            {
+                using(var _targetFile = new FileStream(targetFile ?? GetMhtFile(htmlFile), FileMode.CreateNew))
+                {
+                    _sourceHtmlDirectory = Path.GetDirectoryName(htmlFile);
+                    Convert();
+                }
+            }
+        }
+        private string GetMhtFile()=>
+            Path.Combine(_sourceHtmlDirectory, $"{Path.GetFileNameWithoutExtension(_sourceHtmlFile)}.mht");
+
+        public void Convert(Stream htmlFile, Stream targetFile = null, string sourcePath = null)
+        {
             _sourceHtmlFile = htmlFile;
             _targetFile = targetFile;
-            _tempHtmlFile = GetTempHtml();
-            _sourceHtmlDirectory = Path.GetDirectoryName(htmlFile);
+            _sourceHtmlDirectory = sourcePath?? Path.GetDirectoryName(htmlFile);
+
+            Convert();
+        }
+
+        private void Convert()
+        {
             var htmlRead = new StreamReader(htmlFile);
             var doc = new HtmlDocument();
             doc.Load(htmlRead);
@@ -40,7 +58,7 @@ namespace MhtConverter
 
         private void CreateMht()
         {
-            var targetFile = _targetFile?? GetMhtFile();
+            var targetFile = _targetFile;
             using (StreamReader rd = new StreamReader(_sourceHtmlFile))
             {
                 var item = string.Empty;
@@ -92,9 +110,6 @@ namespace MhtConverter
             OutputFile = targetFile;
         }
 
-        private string GetMhtFile()=>
-            Path.Combine(_sourceHtmlDirectory, $"{Path.GetFileNameWithoutExtension(_sourceHtmlFile)}.mht");
-
         private void CollectExternalLinks(HtmlDocument doc)
         {
             //Collect internal and external links
@@ -124,9 +139,5 @@ namespace MhtConverter
                     _scriptSources.Add(srcAttributeValue, Directory.GetFiles(_sourceHtmlDirectory, srcAttributeValue).FirstOrDefault());
             }
         }
-
-        private string GetTempHtml() => _targetFile != null ?
-            Path.Combine(Path.GetDirectoryName(_targetFile), $"{Path.GetFileNameWithoutExtension(_targetFile)}_temp{Path.GetExtension(_targetFile)}") :
-            Path.Combine(Path.GetDirectoryName(_sourceHtmlFile), $"{Path.GetFileNameWithoutExtension(_sourceHtmlFile)}_temp{Path.GetExtension(_sourceHtmlFile)}");
     }
 }
